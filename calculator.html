@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор | GitHub Pages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="gradient-orb gradient-orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Portfolio</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Главная</a>
+                <a href="calculator.html" class="nav-link active">Калькулятор</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="calculator-wrapper">
+            <div class="calculator-header">
+                <h1 class="calculator-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                        <line x1="8" y1="6" x2="16" y2="6"></line>
+                        <line x1="8" y1="10" x2="8" y2="10"></line>
+                        <line x1="12" y1="10" x2="12" y2="10"></line>
+                        <line x1="16" y1="10" x2="16" y2="10"></line>
+                        <line x1="8" y1="14" x2="8" y2="14"></line>
+                        <line x1="12" y1="14" x2="12" y2="14"></line>
+                        <line x1="16" y1="14" x2="16" y2="14"></line>
+                        <line x1="8" y1="18" x2="8" y2="18"></line>
+                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                        <line x1="16" y1="18" x2="16" y2="18"></line>
+                    </svg>
+                    Калькулятор
+                </h1>
+            </div>
+
+            <div class="calculator">
+                <div class="calculator-display">
+                    <div class="display-expression" id="expression"></div>
+                    <div class="display-result" id="display">0</div>
+                </div>
+
+                <div class="calculator-keypad">
+                    <button class="key key-function" data-action="clear">AC</button>
+                    <button class="key key-function" data-action="delete">⌫</button>
+                    <button class="key key-function" data-action="percent">%</button>
+                    <button class="key key-operator" data-action="operator" data-value="/">÷</button>
+
+                    <button class="key key-number" data-action="number" data-value="7">7</button>
+                    <button class="key key-number" data-action="number" data-value="8">8</button>
+                    <button class="key key-number" data-action="number" data-value="9">9</button>
+                    <button class="key key-operator" data-action="operator" data-value="*">×</button>
+
+                    <button class="key key-number" data-action="number" data-value="4">4</button>
+                    <button class="key key-number" data-action="number" data-value="5">5</button>
+                    <button class="key key-number" data-action="number" data-value="6">6</button>
+                    <button class="key key-operator" data-action="operator" data-value="-">−</button>
+
+                    <button class="key key-number" data-action="number" data-value="1">1</button>
+                    <button class="key key-number" data-action="number" data-value="2">2</button>
+                    <button class="key key-number" data-action="number" data-value="3">3</button>
+                    <button class="key key-operator" data-action="operator" data-value="+">+</button>
+
+                    <button class="key key-number" data-action="number" data-value="0">0</button>
+                    <button class="key key-number" data-action="decimal" data-value=".">.</button>
+                    <button class="key key-equals" data-action="calculate">=</button>
+                </div>
+            </div>
+
+            <div class="calculator-history" id="history-panel">
+                <div class="history-header">
+                    <h3 class="history-title">
+                        <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        История
+                    </h3>
+                    <button class="history-clear" id="clear-history">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="history-list" id="history-list">
+                    <p class="history-empty">История пуста</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 GitHub Pages Bio. Сделано с ❤️</p>
+    </footer>
+
+    <script src="calculator.js"></script>
+</body>
+</html>

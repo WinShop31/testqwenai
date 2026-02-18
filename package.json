@@ -1,0 +1,11 @@
+{
+  "name": "github-bio-site",
+  "version": "1.0.0",
+  "description": "Beautiful bio site for GitHub Pages with calculator",
+  "scripts": {
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.0"
+  }
+}
